@@ -16,7 +16,7 @@ public class EmployeeController {
 	@Autowired
 	private IEmployeeService employeeService;
 
-	@GetMapping("/eId")
+	@GetMapping("/{eId}")
 	public Employee getEmployee(@PathVariable("eId") long eId) {
 
 		Employee employee = employeeService.getEmployee(eId);
